@@ -1,12 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { styled } from "styled-components";
 import { Button } from "../styles/button";
-import { AppContext } from "../context";
+import { useGlobalContext } from "../context";
 
-const HeroSection = ({ name, image }) => {
-  const firstName = useContext(AppContext);
-
+const HeroSection = () => {
+  const { name, image } = useGlobalContext();
   const Wrapper = styled.section`
     padding: 9rem 0;
 
